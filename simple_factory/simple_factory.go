@@ -21,26 +21,32 @@ type Banana struct {}
 // Orange 橘子，实现Fruit接口
 type Orange struct {}
 
+// Peeling 苹果削果皮
 func (apple Apple) Peeling() {
 	fmt.Println("削苹果果皮")
 }
 
+// Eat 吃苹果
 func (apple Apple) Eat() {
 	fmt.Println("吃苹果")
 }
 
+// Peeling 香蕉剥果皮
 func (banana Banana) Peeling() {
 	fmt.Println("剥开香蕉果皮")
 }
 
+// Eat 吃香蕉
 func (banana Banana) Eat() {
 	fmt.Println("吃香蕉")
 }
 
+// Peeling 橘子剥果皮
 func (orange Orange) Peeling() {
 	fmt.Println("剥开橘子果皮")
 }
 
+// Eat 吃橘子
 func (orange Orange) Eat() {
 	fmt.Println("吃橘子")
 }
