@@ -3,19 +3,13 @@ package factory
 
 import "fmt"
 
-// FruitFacotry 水果工厂接口
-type FruitFacotry interface {
-	// CreateFruit 生产水果
-	CreateFruit() Fruit
-}
-
-//AppleFactory 苹果工厂，实现FruitFacotry接口
+//AppleFactory 苹果工厂
 type AppleFactory struct {}
 
-//BananaFactory 香蕉工厂，实现FruitFacotry接口
+//BananaFactory 香蕉工厂
 type BananaFactory struct {}
 
-//OrangeFactory 橙子工厂，实现FruitFacotry接口
+//OrangeFactory 橙子工厂
 type OrangeFactory struct {}
 
 // CreateFruit 苹果工厂生产苹果

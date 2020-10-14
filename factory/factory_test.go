@@ -7,10 +7,9 @@ func Test(t *testing.T) {
 }
 
 func ProduceFruitAndEat(t *testing.T) {
-	var appleFactory, bananaFactory, orangeFactory FruitFacotry
-	appleFactory = &AppleFactory{}
-	bananaFactory = &BananaFactory{}
-	orangeFactory = &OrangeFactory{}
+	appleFactory := &AppleFactory{}
+	bananaFactory := &BananaFactory{}
+	orangeFactory := &OrangeFactory{}
 
 	var apple, banana, orange Fruit
 
