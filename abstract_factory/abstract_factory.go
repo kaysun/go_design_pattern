@@ -15,7 +15,7 @@ type AppleFactory struct {}
 //BananaFactory 香蕉工厂，实现FruitFacotry接口
 type BananaFactory struct {}
 
-//OrangeFactory 橙子工厂，实现FruitFacotry接口
+//OrangeFactory 橘子工厂，实现FruitFacotry接口
 type OrangeFactory struct {}
 
 // CreateFruit 苹果工厂生产苹果

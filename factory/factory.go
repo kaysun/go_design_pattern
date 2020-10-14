@@ -9,7 +9,7 @@ type AppleFactory struct {}
 //BananaFactory 香蕉工厂
 type BananaFactory struct {}
 
-//OrangeFactory 橙子工厂
+//OrangeFactory 橘子工厂
 type OrangeFactory struct {}
 
 // CreateFruit 苹果工厂生产苹果
