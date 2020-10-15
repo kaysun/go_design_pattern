@@ -5,6 +5,7 @@ import "testing"
 func Test(t *testing.T) {
 	t.Run("comment_filter1: ", CommentFilter1)
 	t.Run("comment_filter2: ", CommentFilter2)
+	t.Run("comment_filter3: ", CommentFilter3)
 	t.Run("up_filter1: ", UpFilter1)
 	t.Run("up_filter2: ", UpFilter2)
 }
@@ -26,6 +27,18 @@ func CommentFilter2(t *testing.T) {
 	info := CommentInfo{
 		Content:   "太可怕了",
 		ArticleID: 0,
+	}
+	//执行过滤器
+	var commentFilter CommentParamFilter
+	commentFilter = CommentParamFilter{info}
+	commentFilter.DoParamFilter()
+}
+
+func CommentFilter3(t *testing.T) {
+	//构造过滤器信息
+	info := CommentInfo{
+		Content:   "    ",
+		ArticleID: 1234,
 	}
 	//执行过滤器
 	var commentFilter CommentParamFilter
