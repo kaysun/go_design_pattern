@@ -11,27 +11,24 @@ type Strategy interface {
 
 // ConcreteStrategyA 促销策略A
 type ConcreteStrategyA struct {
-
 }
 
 // ConcreteStrategyB 促销策略B
 type ConcreteStrategyB struct {
-
 }
 
 // ConcreteStrategyC 促销策略C
 type ConcreteStrategyC struct {
-
 }
 
-func (strategy ConcreteStrategyA)Promotion()  {
+func (strategy ConcreteStrategyA) Promotion() {
 	fmt.Println("618促销")
 }
 
-func (strategy ConcreteStrategyB)Promotion()  {
+func (strategy ConcreteStrategyB) Promotion() {
 	fmt.Println("99促销")
 }
 
-func (strategy ConcreteStrategyC)Promotion()  {
+func (strategy ConcreteStrategyC) Promotion() {
 	fmt.Println("双十一促销")
 }

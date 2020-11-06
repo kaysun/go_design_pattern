@@ -13,13 +13,13 @@ type Fruit interface {
 }
 
 // Apple 苹果，实现Fruit接口
-type Apple struct {}
+type Apple struct{}
 
 // Banana 香蕉，实现Fruit接口
-type Banana struct {}
+type Banana struct{}
 
 // Orange 橘子，实现Fruit接口
-type Orange struct {}
+type Orange struct{}
 
 // Peeling 苹果削果皮
 func (apple Apple) Peeling() {
@@ -64,8 +64,8 @@ const (
 )
 
 // FruitFuncMap 全局可导出变量，水果类型与创建水果对象的map，用于减小圈复杂度
-var FruitFuncMap = map[FruitType]func() Fruit {
-	FruitTypeApple: produceApple,
+var FruitFuncMap = map[FruitType]func() Fruit{
+	FruitTypeApple:  produceApple,
 	FruitTypeBanana: produceBanana,
 	FruitTypeOrange: produceOrange,
 }

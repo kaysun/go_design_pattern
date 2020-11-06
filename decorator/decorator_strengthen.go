@@ -8,7 +8,7 @@ type HappinessIndex interface {
 }
 
 // MySelf 我自己，实现HappinessIndex接口
-type MySelf struct {}
+type MySelf struct{}
 
 // GetHappinessIndex 获取幸福指数，实现HappinessIndex接口
 func (myself MySelf) GetHappinessIndex() int {

@@ -29,7 +29,7 @@ const (
 )
 
 // SaleTypeFuncMap 全局可导出变量，咖啡额外添加类型与创建咖啡额外添加对象的map，用于减小圈复杂度
-var SaleTypeFuncMap = map[SaleType]func() Strategy {
+var SaleTypeFuncMap = map[SaleType]func() Strategy{
 	SaleTypeA: NewStrategyA,
 	SaleTypeB: NewStrategyB,
 	SaleTypeC: NewStrategyC,

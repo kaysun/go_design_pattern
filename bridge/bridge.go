@@ -55,10 +55,10 @@ const (
 )
 
 // CoffeeFuncMap 全局可导出变量，咖啡类型与创建咖啡对象的map，用于减小圈复杂度
-var CoffeeFuncMap = map[CoffeeCupType]func(coffeeAddtion ICoffeeAddtion) ICoffee {
-	CoffeeCupTypeLarge: NewLargeCoffee,
+var CoffeeFuncMap = map[CoffeeCupType]func(coffeeAddtion ICoffeeAddtion) ICoffee{
+	CoffeeCupTypeLarge:  NewLargeCoffee,
 	CoffeeCupTypeMedium: NewMediumCoffee,
-	CoffeeCupTypeSmall: NewSmallCoffee,
+	CoffeeCupTypeSmall:  NewSmallCoffee,
 }
 
 // NewCoffee 创建咖啡接口对象的简单工厂，根据咖啡容量类型，获取创建接口对象的func
@@ -91,10 +91,10 @@ type ICoffeeAddtion interface {
 }
 
 // Milk 加奶，实现ICoffeeAddtion接口
-type Milk struct {}
+type Milk struct{}
 
 // Sugar 加糖，实现ICoffeeAddtion接口
-type Sugar struct {}
+type Sugar struct{}
 
 // AddSomething Milk实现加奶
 func (milk Milk) AddSomething() {
@@ -117,8 +117,8 @@ const (
 )
 
 // CoffeeAddtionFuncMap 全局可导出变量，咖啡额外添加类型与创建咖啡额外添加对象的map，用于减小圈复杂度
-var CoffeeAddtionFuncMap = map[CoffeeAddtionType]func() ICoffeeAddtion {
-	CoffeeAddtionTypeMilk: NewCoffeeAddtionMilk,
+var CoffeeAddtionFuncMap = map[CoffeeAddtionType]func() ICoffeeAddtion{
+	CoffeeAddtionTypeMilk:  NewCoffeeAddtionMilk,
 	CoffeeAddtionTypeSugar: NewCoffeeAddtionSugar,
 }
 

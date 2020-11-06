@@ -14,7 +14,7 @@ func GetSingleton(t *testing.T) {
 	   执行获取单例对象
 	   instance1 = 0xc0000584a0, name=标题1
 	   instance2 = 0xc0000584a0, name=标题1
-	 */
+	*/
 
 	instance1 := GetInstance("标题1")
 	fmt.Println(fmt.Sprintf("instance1 = %p, name=%s", instance1, instance1.Title))

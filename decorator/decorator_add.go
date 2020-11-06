@@ -12,7 +12,6 @@ type Booker interface {
 
 // Book 书，实现Booker接口
 type Book struct {
-
 }
 
 // Reading 读书，实现Booker接口

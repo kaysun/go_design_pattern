@@ -3,7 +3,7 @@
 	每个filter都需要验证，完全验证通过才会放行，去执行业务逻辑
 	一旦有filter验证不通过，则立刻退出
 	适合处理参数校验，权限校验，记录日志，准备相关资源等场景
- */
+*/
 package filter
 
 import (
@@ -80,8 +80,8 @@ type UpParamFilter struct {
 // DoParamFilter 评论参数过滤器，实现参数过滤方法
 func (cpf CommentParamFilter) DoParamFilter() error {
 	myContext := Context{
-		Context:  context.TODO(),
-		key: "评论参数过滤器",
+		Context: context.TODO(),
+		key:     "评论参数过滤器",
 	}
 	cf := NewFilter(
 		myContext,
@@ -114,8 +114,8 @@ func validateComment2(ctx Context, info CommentInfo) HandlerFunc {
 // DoParamFilter 点赞参数过滤器，实现参数过滤方法
 func (upf UpParamFilter) DoParamFilter() error {
 	myContext := Context{
-		Context:  context.TODO(),
-		key: "点赞参数过滤器",
+		Context: context.TODO(),
+		key:     "点赞参数过滤器",
 	}
 	cf := NewFilter(
 		myContext,

@@ -9,22 +9,22 @@ func Test(t *testing.T) {
 
 func CreateCommandExecute(t *testing.T) {
 	var receiver Receiver
-	receiver= &CreateReceiver{}
+	receiver = &CreateReceiver{}
 
 	var command Command
-	command = &CreateCommand{receiver:receiver}
+	command = &CreateCommand{receiver: receiver}
 
-	invoker := Invoker{command:command}
+	invoker := Invoker{command: command}
 	invoker.Call()
 }
 
 func UpdateCommandExecute(t *testing.T) {
 	var receiver Receiver
-	receiver= &UpdateReceiver{}
+	receiver = &UpdateReceiver{}
 
 	var command Command
-	command = &UpdateCommand{receiver:receiver}
+	command = &UpdateCommand{receiver: receiver}
 
-	invoker := Invoker{command:command}
+	invoker := Invoker{command: command}
 	invoker.Call()
 }

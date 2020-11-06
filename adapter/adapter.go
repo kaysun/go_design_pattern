@@ -4,7 +4,7 @@ package adapter
 import "fmt"
 
 // Volts220 源结构体，电压220v
-type Volts220 struct {}
+type Volts220 struct{}
 
 // OutputPower 输出电压，实现了Adaptee接口
 func (v Volts220) OutputPower() {

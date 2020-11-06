@@ -1,9 +1,10 @@
-/*  package responsibility_chain 责任链模式，把多个处理器串成链，然后让请求在链上传递。
+/*
+    package responsibility_chain 责任链模式，把多个处理器串成链，然后让请求在链上传递。
     以财务审批为例：
     Leader 直接上级只能审核500元以下的报销
 	Director 总监只能审核5000元以下的报销
 	CFO 首席财务官可以审核任意金额的报销
- */
+*/
 package responsibility_chain
 
 import "fmt"
@@ -23,13 +24,13 @@ type Request struct {
 }
 
 // Leader 直接上级只能审核500元以下的报销，实现Manager接口
-type Leader struct {}
+type Leader struct{}
 
 // Director 总监只能审核5000元以下的报销，实现Manager接口
-type Director struct {}
+type Director struct{}
 
 // CFO 首席财务官可以审核任意金额的报销，实现Manager接口
-type CFO struct {}
+type CFO struct{}
 
 // Review Leader实现报销方法
 func (leader Leader) Review(request Request) bool {

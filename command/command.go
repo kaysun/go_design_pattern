@@ -22,12 +22,12 @@ type UpdateCommand struct {
 }
 
 // Execute 创建命令实现执行命令方法
-func (command CreateCommand)Execute() {
+func (command CreateCommand) Execute() {
 	command.receiver.Action()
 }
 
 // Execute 修改命令实现执行命令方法
-func (command UpdateCommand)Execute() {
+func (command UpdateCommand) Execute() {
 	command.receiver.Action()
 }
 
@@ -38,10 +38,10 @@ type Receiver interface {
 }
 
 // CreateReceiver 创建接收者，实现Receiver接口
-type CreateReceiver struct {}
+type CreateReceiver struct{}
 
 // UpdateReceiver 更新接收者，实现Receiver接口
-type UpdateReceiver struct {}
+type UpdateReceiver struct{}
 
 func (receiver CreateReceiver) Action() {
 	fmt.Println("执行了创建")
