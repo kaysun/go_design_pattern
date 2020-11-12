@@ -7,11 +7,14 @@ import (
 	"sync"
 )
 
+// Color 棋子的颜色
 type Color string
 
 const (
+	// ColorBlack 黑色
 	ColorBlack Color = "黑色"
-	ColorRed   Color = "红色"
+	// ColorRed 红色
+	ColorRed Color = "红色"
 )
 
 var (
@@ -34,8 +37,11 @@ func GetPieceUnitFactory() *pieceUnitFactory {
 
 // PieceUnit 棋子享元
 type PieceUnit struct {
-	ID    int
-	Text  string
+	// ID 唯一标识
+	ID int
+	// Text 棋子的文字
+	Text string
+	// Color 棋子的颜色
 	Color Color
 }
 
