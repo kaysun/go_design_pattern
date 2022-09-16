@@ -1,5 +1,10 @@
-// package decorator 装饰者模式，在运行期动态地给对象添加额外的指责，比子类更灵活。第二个功能：用于添加功能的装饰模式。
-// 若不想修改原来的接口，则可以使用装饰者。go这种语言，若增加接口的方法，则原来实现接口的结构体都需要增加一个新方法，这样就不符合开闭原则了。
+/*
+Package decorator 装饰者模式
+第一个功能：在运行期动态地给对象添加额外的指责，比子类更灵活。
+第二个功能：用于添加功能的装饰模式。
+若不想修改原来的接口，则可以使用装饰者。
+go这种语言，若增加接口的方法，则原来实现接口的结构体都需要增加一个新方法，这样就不符合开闭原则了。
+*/
 package decorator
 
 import "fmt"
@@ -41,7 +46,7 @@ type ConcreteUnderline struct {
 	Booker Booker
 }
 
-// ReadingBooks ConcreteUnderline提供读书的方法，包装了Booker接口
+// Reading ConcreteUnderline提供读书的方法，包装了Booker接口
 func (underline ConcreteUnderline) Reading() {
 	underline.Booker.Reading()
 }
@@ -57,12 +62,12 @@ type ConcreteNotesTake struct {
 	Booker Booker
 }
 
-// ReadingBooks ConcreteNotesTake提供读书的方法，包装了Booker接口
+// Reading ConcreteNotesTake提供读书的方法，包装了Booker接口
 func (notesTake ConcreteNotesTake) Reading() {
 	notesTake.Booker.Reading()
 }
 
-// Underline 划线，实现NotesTaker接口
+// TakeNotes 记笔记，实现NotesTaker接口
 func (notesTake ConcreteNotesTake) TakeNotes() {
 	fmt.Println("我正在记笔记")
 }

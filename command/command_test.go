@@ -9,7 +9,7 @@ func Test(t *testing.T) {
 
 func CreateCommandExecute(t *testing.T) {
 	var receiver Receiver
-	receiver = &CreateReceiver{}
+	receiver = &CommentCreateReceiver{}
 
 	var command Command
 	command = &CreateCommand{receiver: receiver}
@@ -20,7 +20,7 @@ func CreateCommandExecute(t *testing.T) {
 
 func UpdateCommandExecute(t *testing.T) {
 	var receiver Receiver
-	receiver = &UpdateReceiver{}
+	receiver = &CommentUpdateReceiver{}
 
 	var command Command
 	command = &UpdateCommand{receiver: receiver}

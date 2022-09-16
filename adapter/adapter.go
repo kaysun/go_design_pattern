@@ -1,4 +1,4 @@
-// package adapter 适配器，以手机充电为例，适配器将220v电压转为5v电压
+// Package adapter 适配器，以手机充电为例，适配器将220v电压转为5v电压
 package adapter
 
 import "fmt"

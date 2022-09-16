@@ -9,18 +9,18 @@ func Test(t *testing.T) {
 }
 
 // Combination 单元测试
-//print WinForm(WINDOW窗口)
-//print Picture(LOGO图片)
-//print Button(登录)
-//print Button(注册)
-//print Frame(FRAME1)
-//print Label(用户名)
-//print TextBox(文本框)
-//print Label(密码)
-//print PassWordBox(密码框)
-//print CheckBox(复选框)
-//print TextBox(记住用户名)
-//print LinkLabel(忘记密码)
+// print WinForm(WINDOW窗口)
+// print Picture(LOGO图片)
+// print Button(登录)
+// print Button(注册)
+// print Frame(FRAME1)
+// print Label(用户名)
+// print TextBox(文本框)
+// print Label(密码)
+// print PassWordBox(密码框)
+// print CheckBox(复选框)
+// print TextBox(记住用户名)
+// print LinkLabel(忘记密码)
 func Combination(t *testing.T) {
 	window := &WinForm{UIAttr: UIAttr{Name: "WINDOW窗口"}}
 	picture := &Picture{UIAttr{Name: "LOGO图片"}}
@@ -36,7 +36,8 @@ func Combination(t *testing.T) {
 	linkLable := &LinkLabel{UIAttr{Name: "忘记密码"}}
 
 	window.AddUIComponents([]UIComponent{picture, loginButton, registerButton, frame})
-	frame.AddUIComponents([]UIComponent{userLable, textBox, passwordLable, passwordBox, checkBox, rememberUserTextBox, linkLable})
+	frame.AddUIComponents([]UIComponent{userLable, textBox,
+		passwordLable, passwordBox, checkBox, rememberUserTextBox, linkLable})
 
 	window.PrintUIComponent()
 }

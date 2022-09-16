@@ -33,8 +33,8 @@ func (window *WinForm) AddUIComponents(components []UIComponent) {
 	window.Components = append(window.Components, components...)
 }
 
-// GetUIComponentList 获取UI组件列表
-func (window *WinForm) GetUIComponentList() []UIComponent {
+// GetUIComponents 获取UI组件列表
+func (window *WinForm) GetUIComponents() []UIComponent {
 	return window.Components
 }
 
@@ -71,7 +71,7 @@ func (frame *Frame) AddUIComponents(components []UIComponent) {
 	frame.Components = append(frame.Components, components...)
 }
 
-// GetUIComponentList 获取UI组件列表
-func (frame *Frame) GetUIComponentList() []UIComponent {
+// GetUIComponents 获取UI组件列表
+func (frame *Frame) GetUIComponents() []UIComponent {
 	return frame.Components
 }

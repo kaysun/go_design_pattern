@@ -1,4 +1,4 @@
-// package bridge 桥接模式，以订购咖啡为例，两个纬度，分别为大中小杯，加糖加奶
+// Package bridge 桥接模式，以订购咖啡为例，两个纬度，分别为大中小杯，加糖加奶
 package bridge
 
 import "fmt"
@@ -101,7 +101,7 @@ func (milk Milk) AddSomething() {
 	fmt.Println("加奶")
 }
 
-//AddSomething Sugar实现加糖
+// AddSomething Sugar实现加糖
 func (sugar Sugar) AddSomething() {
 	fmt.Println("加糖")
 }
@@ -135,7 +135,7 @@ func NewCoffeeAddtionMilk() ICoffeeAddtion {
 	return &Milk{}
 }
 
-// NewCoffeeAddtionMilk 创建咖啡额外加糖
+// NewCoffeeAddtionSugar 创建咖啡额外加糖
 func NewCoffeeAddtionSugar() ICoffeeAddtion {
 	return &Sugar{}
 }

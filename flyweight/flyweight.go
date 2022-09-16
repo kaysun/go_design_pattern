@@ -116,7 +116,7 @@ type ChessBoard struct {
 	ChessPieceMap map[int]*Piece
 }
 
-//init 初始化棋局。 You must call this。
+// Init 初始化棋局。 You must call this。
 func (board *ChessBoard) Init() {
 	// 加锁
 	board.Lock()

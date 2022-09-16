@@ -1,4 +1,4 @@
-// package command 命令模式，引入调用者和接收者实现解耦
+// Package command 命令模式，引入调用者和接收者实现解耦
 package command
 
 import "fmt"
@@ -37,18 +37,18 @@ type Receiver interface {
 	Action()
 }
 
-// CreateReceiver 创建接收者，实现Receiver接口
-type CreateReceiver struct{}
+// CommentCreateReceiver 评论创建接收者，实现Receiver接口
+type CommentCreateReceiver struct{}
 
-// UpdateReceiver 更新接收者，实现Receiver接口
-type UpdateReceiver struct{}
+// CommentUpdateReceiver 评论添加更新接收者，实现Receiver接口
+type CommentUpdateReceiver struct{}
 
-func (receiver CreateReceiver) Action() {
-	fmt.Println("执行了创建")
+func (receiver CommentCreateReceiver) Action() {
+	fmt.Println("执行了创建评论")
 }
 
-func (receiver UpdateReceiver) Action() {
-	fmt.Println("执行了修改")
+func (receiver CommentUpdateReceiver) Action() {
+	fmt.Println("执行了更新评论")
 }
 
 // Invoker 调用者

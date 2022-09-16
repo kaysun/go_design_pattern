@@ -7,7 +7,7 @@ func Test(t *testing.T) {
 }
 
 func ProduceFruitAndEat(t *testing.T) {
-	var factory FruitFacotry
+	var factory FruitFactory
 	var apple, banana, orange Fruit
 
 	//创建苹果工厂，生产苹果，吃苹果

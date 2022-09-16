@@ -1,21 +1,21 @@
-// package abstract_factory 抽象工厂模式
+// Package abstract_factory 抽象工厂模式
 package abstract_factory
 
 import "fmt"
 
-// FruitFacotry 水果工厂接口
-type FruitFacotry interface {
+// FruitFactory 水果工厂接口
+type FruitFactory interface {
 	// CreateFruit 生产水果
 	CreateFruit() Fruit
 }
 
-//AppleFactory 苹果工厂，实现FruitFacotry接口
+// AppleFactory 苹果工厂，实现FruitFactory接口
 type AppleFactory struct{}
 
-//BananaFactory 香蕉工厂，实现FruitFacotry接口
+// BananaFactory 香蕉工厂，实现FruitFactory接口
 type BananaFactory struct{}
 
-//OrangeFactory 橘子工厂，实现FruitFacotry接口
+// OrangeFactory 橘子工厂，实现FruitFactory接口
 type OrangeFactory struct{}
 
 // CreateFruit 苹果工厂生产苹果

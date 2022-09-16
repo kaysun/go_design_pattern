@@ -1,4 +1,4 @@
-//package builder 建造者模式
+// Package builder 建造者模式
 package builder
 
 const (
@@ -8,7 +8,7 @@ const (
 	ErrCodeNameRequired = -10001
 	// ErrCodeMinIdleMoreThanMaxIdle 最小空闲数超过了最大空闲数
 	ErrCodeMinIdleMoreThanMaxIdle = -10002
-	// ErrCodeMaxTotalLessThanOrEqualToZero 最大连接数必须大于0
+	// ErrCodeMaxTotalMustMoreThanZero 最大连接数必须大于0
 	ErrCodeMaxTotalMustMoreThanZero = -10003
 	// ErrCodeMaxIdleMustMoreThanZero 最大空闲数必须大于0
 	ErrCodeMaxIdleMustMoreThanZero = -10004

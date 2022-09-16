@@ -6,14 +6,16 @@ import "fmt"
 type PrintClient struct{}
 
 // printContainer 打印容器控件
-func (client PrintClient) printContainer(component UIComponent, componentAddtion UIComponentAddtion) {
+func (client PrintClient) printContainer(component UIComponent,
+	componentAddtion UIComponentAddtion) {
 	client.printCurrentControl(component)
-	for _, v := range componentAddtion.GetUIComponentList() {
+	for _, v := range componentAddtion.GetUIComponents() {
 		v.PrintUIComponent()
 	}
 }
 
 // printCurrentControl 打印当前控件
 func (client PrintClient) printCurrentControl(component UIComponent) {
-	fmt.Println(fmt.Sprintf("print %s(%s)", component.GetUIControlName(), component.GetConcreteUIControlName()))
+	fmt.Println(fmt.Sprintf("print %s(%s)",
+		component.GetUIControlName(), component.GetConcreteUIControlName()))
 }
